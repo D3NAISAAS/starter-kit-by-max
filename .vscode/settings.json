@@ -1,0 +1,193 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ],
+    [
+      "cx\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ],
+    "twc\\.[^`]+`([^`]*)`",
+    "twc\\([^`]*?\\)`([^`]*)`",
+    [
+      "twc\\.[^`]+\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ],
+    [
+      "twc\\([^`]*?\\).*?\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
+  ],
+  "cSpell.words": [
+    "zustand"
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.tabSize": 2,
+  "[mdx]": {
+    "editor.wordWrap": "on"
+  },
+  "[txt]": {
+    "editor.wordWrap": "on"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 2000,
+  "files.enableTrash": true,
+  "workbench.editor.limit.value": 20,
+  "workbench.editor.limit.enabled": true,
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.02)",
+    "rgba(127,255,127,0.02)",
+    "rgba(255,127,255,0.02)",
+    "rgba(79,236,236,0.02)"
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "editor.accessibilitySupport": "off",
+  "git.enableSmartCommit": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.commandCenter": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.layoutControl.enabled": true,
+  "git.ignoreRebaseWarning": true,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "workbench.editor.customLabels.patterns": {
+    "**/src/actions/**/*.action.ts": "${filename} - Action",
+    "**/src/app/**/page.tsx": "${dirname} - Page",
+    "**/src/app/**/layout.tsx": "${dirname} - Layout",
+    "**/src/components/**/index.tsx": "${dirname} - Component",
+    "**/src/lib/**/index.tsx": "${dirname} - Lib",
+    "**/src/features/**/index.tsx": "${dirname} - Feature",
+    "**/src/hooks/**/index.tsx": "${dirname} - Hook",
+    "**/src/stores/**/index.tsx": "${dirname} - Store",
+    "**/src/utils/**/index.tsx": "${dirname} - Utils",
+    "**/src/types/**/index.tsx": "${dirname} - Types",
+    "**/src/config/**/index.tsx": "${dirname} - Config",
+    "**/src/assets/**/index.tsx": "${dirname} - Assets",
+    "**/src/testing/**/index.tsx": "${dirname} - Testing",
+  },
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    {
+      "rule": "style/*",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "format/*",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-indent",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-spacing",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-spaces",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-order",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-dangle",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*-newline",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*quotes",
+      "severity": "off",
+      "fixable": true
+    },
+    {
+      "rule": "*semi",
+      "severity": "off",
+      "fixable": true
+    }
+  ],
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ],
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+}

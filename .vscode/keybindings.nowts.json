@@ -1,0 +1,121 @@
+[
+  {
+    "INFO": "Here is the keybidding I use for VSCode. You can copy/past them in your key binding file.",
+    "TUTO1": "Use CMD + SHIFT + P to open the command palette and search for 'keybinding' to open the keybinding file.",
+    "TUTO2": "Choose 'Open Keyboard Shortcuts (JSON)' settings."
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "editor.action.organizeImports",
+    "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "editor.action.sourceAction",
+    "args": {
+      "kind": "source.addMissingImports",
+      "apply": "first"
+    }
+  },
+  {
+    "key": "cmd+t",
+    "command": "codesnap.start",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+[Period]",
+    "command": "editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "-editor.action.addCommentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+[Period]",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+[Period]",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+[Period]",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "editor.action.commentLine",
+        "cursorDown"
+      ]
+    },
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "runCommands",
+    "when": "editorTextFocus",
+    "args": {
+      "commands": [
+        {
+          "command": "git.stageAll"
+        },
+        {
+          "command": "windsurf.generateCommitMessage"
+        },
+        {
+          "command": "git.commitAll"
+        },
+        {
+          "command": "git.push",
+          "args": {
+            "remote": "origin"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "cmd+r",
+    "command": "actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.files.saveAll",
+        "git.stageAll",
+        "windsurf.generateCommitMessage",
+        "git.commitStaged",
+        "git.push"
+      ]
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.sourceAction",
+    "args": {
+      "kind": "source.addMissingImports",
+      "apply": "first"
+    }
+  }
+]

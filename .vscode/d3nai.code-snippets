@@ -1,0 +1,45 @@
+{
+  "Default Export Function": {
+    "prefix": "drfunc",
+    "description": "Create an exported function named after the file (converts kebab-case to PascalCase)",
+    "scope": "typescriptreact,typescript,javascriptreact,javascript",
+    "body": [
+      "export function ${TM_FILENAME_BASE/^([a-z])|[\\-_]([a-z])/${1:/capitalize}${2:/capitalize}/g}() {",
+      "  return (",
+      "    $0",
+      "  );",
+      "}",
+    ],
+  },
+  "Layout Component": {
+    "prefix": "drlayout",
+    "description": "Create a layout component named after the directory (handles Next.js route groups)",
+    "scope": "typescriptreact,typescript,javascriptreact,javascript",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${TM_DIRECTORY/^.*[\\\/\\\\](\\(?)([^\\(\\)]*)(\\)?)$/${2:/capitalize}/}Layout = ({ children }: { children: React.ReactNode }) => {",
+      "  return (",
+      "    <div>$0{children}</div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_DIRECTORY/^.*[\\\/\\\\](\\(?)([^\\(\\)]*)(\\)?)$/${2:/capitalize}/}Layout;",
+    ],
+  },
+  "Page Component": {
+    "prefix": "drpage",
+    "description": "Create a page component named after the folder (converts kebab-case to PascalCase)",
+    "scope": "typescriptreact,typescript,javascriptreact,javascript",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${TM_DIRECTORY/^.*[\\\/\\\\](\\(?)([^\\(\\)]*)(\\)?)$/${2:/capitalize}/}Page = () => {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "};",
+      "export default ${TM_DIRECTORY/^.*[\\\/\\\\](\\(?)([^\\(\\)]*)(\\)?)$/${2:/capitalize}/}Page;",
+    ],
+  },
+}
